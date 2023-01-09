@@ -1,10 +1,10 @@
-package controllers;
+package net.yorksolutions.zachrauchblogcmscapstonebe.controllers;
 
-import org.example.models.AppUser;
-import org.example.services.AppUserService;
+import net.yorksolutions.zachrauchblogcmscapstonebe.models.AppUser;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import net.yorksolutions.zachrauchblogcmscapstonebe.services.AppUserService;
 
 @CrossOrigin
 @RestController
@@ -34,7 +34,7 @@ public class AppUserController {
     }
 
     @PutMapping("/{id}")
-    public AppUser modifyAppUser (@PathVariable Long id, @RequestBody AppUser appUser, @RequestParam String email, @RequestParam String password) {
+    public AppUser modifyAppUser(@PathVariable Long id, @RequestBody AppUser appUser, @RequestParam String email, @RequestParam String password) {
         try {
             return appUserService.modifyAppUser(id, appUser, email, password);
         } catch (Exception e) {

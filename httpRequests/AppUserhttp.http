@@ -2,10 +2,22 @@ POST http://localhost:8080/users
 Content-Type: application/json
 
 {
-  "email": "123@aol.com",
+  "email": "1234@aol.com",
   "password": "pass",
   "firstName": "1",
   "lastName": "2"
+}
+###
+DELETE http://localhost:8080/users/2
 
+###
+PUT http://localhost:8080/users/2
+Content-Type: application/json
+
+{
+  "email": "abc@aol.com",
+  "password": "pass",
+  "firstName": "1",
+  "lastName": "2"
 }
 ###

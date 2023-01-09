@@ -1,4 +1,4 @@
-package models;
+package net.yorksolutions.zachrauchblogcmscapstonebe.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    public Long id;
+    public Long userId;
     public String email;
     public String password;
     public String firstName;

@@ -1,6 +1,6 @@
-package repositories;
+package net.yorksolutions.zachrauchblogcmscapstonebe.repositories;
 
-import org.example.models.AppUser;
+import net.yorksolutions.zachrauchblogcmscapstonebe.models.AppUser;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
