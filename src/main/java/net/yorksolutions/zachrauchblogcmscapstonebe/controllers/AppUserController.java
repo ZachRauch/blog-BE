@@ -41,4 +41,13 @@ public class AppUserController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
     }
+
+    @GetMapping(params = {"email","password"})
+    public AppUser checkCredentials(@RequestParam String email, @RequestParam String password) {
+        try {
+            return appUserService.checkCredentials(email, password);
+        } catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
+    }
 }

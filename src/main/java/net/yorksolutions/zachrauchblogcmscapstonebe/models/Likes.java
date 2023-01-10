@@ -12,4 +12,6 @@ public class Likes {
     public Long id;
 
     public Long postId;
+
+    public Long userId;
 }

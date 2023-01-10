@@ -32,6 +32,6 @@ public class BlogPostService {
     }
 
     public Iterable<BlogPost> getPostByEmail(String email) {
-        return blogPostRepository.findAllByEmail(email);
+        return blogPostRepository.findByEmail(email);
     }
 }

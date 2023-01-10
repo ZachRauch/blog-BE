@@ -1,6 +1,8 @@
 package net.yorksolutions.zachrauchblogcmscapstonebe.models;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Formula;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.Date;
 import java.util.List;
@@ -17,13 +19,16 @@ public class BlogPost {
 
     public String bodyText;
 
-//    @OneToMany
+//    @ManyToMany
 //    public List<Comment> comments;
 
 //    public String like;
 
-    public Date date;
+    public Date datePosted;
 
     public Date updateDate;
+
+//    @Formula("(select count(*) from likes where likes.postId = postId)")
+//    public Long totalLikes;
 
 }

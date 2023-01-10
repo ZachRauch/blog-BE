@@ -32,4 +32,8 @@ public class AppUserService {
             return appUserRepository.save(appUser);
         } else throw new Exception("Cannot update User, the email you entered is already associated with an existing account");
     }
+
+    public AppUser checkCredentials(String email, String password) {
+        return appUserRepository.findAppUserByEmailAndPassword(email, password).orElseThrow();
+    }
 }

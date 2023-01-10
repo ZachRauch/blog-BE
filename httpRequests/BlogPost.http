@@ -2,9 +2,9 @@ POST http://localhost:8080/blogposts
 Content-Type: application/json
 
 {
-  "userId": 1,
-  "titleText": "First Title",
-  "bodyText": "First post body",
+  "userId": 2,
+  "titleText": "Another Title",
+  "bodyText": "Another post body",
   "date": null,
   "updateDate": null
 }

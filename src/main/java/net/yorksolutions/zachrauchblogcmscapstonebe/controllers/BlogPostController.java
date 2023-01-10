@@ -23,7 +23,7 @@ public class BlogPostController {
             return blogPostService.getAllPosts();
     }
 
-    @GetMapping
+    @GetMapping(params = {"email"})
     public Iterable<BlogPost> getPosts(@RequestParam String email) {
             return blogPostService.getPostByEmail(email);
     }
