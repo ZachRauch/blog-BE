@@ -24,8 +24,13 @@ public class CommentController {
         this.commentService.deleteComment(id);
     }
 
-    @GetMapping(params = {"postId"})
-    public Iterable<Comment> getComments(@RequestParam Long postId) {
-        return commentService.getCommentByPostId(postId);
+//    @GetMapping(params = {"postId"})
+//    public Iterable<Comment> getComments(@RequestParam Long postId) {
+//        return commentService.getCommentByPostId(postId);
+//    }
+
+    @GetMapping
+    public Iterable<Comment> getComments() {
+        return commentService.getAllComment();
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public class BlogPost {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    public Long postId;
+    public Long id;
 
     public Long userId;
 
@@ -28,7 +28,7 @@ public class BlogPost {
 
     public Date updateDate;
 
-//    @Formula("(select count(*) from likes where likes.postId = postId)")
+//    @Query(value = "select count(*) from likes where postId = :postId", nativeQuery = true)
 //    public Long totalLikes;
 
 }

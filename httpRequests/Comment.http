@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "postId": 1,
-  "userId": 1,
-  "comment": "Nice!"
+  "userId": 2,
+  "comment": "Cool cat!"
 }
 ###

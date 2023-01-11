@@ -23,4 +23,8 @@ public class LikesService {
     public Iterable<Likes> getLikes(Long postId) {
         return likesRepository.findByPostId(postId);
     }
+
+    public Iterable<Likes> getAllLikes() {
+        return likesRepository.findAll();
+    }
 }

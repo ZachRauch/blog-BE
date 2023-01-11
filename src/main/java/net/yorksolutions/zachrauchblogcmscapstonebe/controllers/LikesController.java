@@ -25,8 +25,12 @@ public class LikesController {
         this.likesService.deleteLike(id);
     }
 
-    @GetMapping(params = {"postId"})
-    public Iterable<Likes> getLikes(@RequestParam Long postId) {
-        return this.likesService.getLikes(postId);
-    }
+//    @GetMapping(params = {"postId"})
+//    public Iterable<Likes> getLikes(@RequestParam Long postId) {
+//        return this.likesService.getLikes(postId);
+//    }
+@GetMapping
+public Iterable<Likes> getLikes() {
+    return this.likesService.getAllLikes();
+}
 }

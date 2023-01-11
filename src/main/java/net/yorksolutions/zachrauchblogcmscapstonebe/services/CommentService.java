@@ -23,4 +23,8 @@ public class CommentService {
     public Iterable<Comment> getCommentByPostId(Long postId) {
         return commentRepository.findByPostId(postId);
     }
+
+    public Iterable<Comment> getAllComment() {
+        return commentRepository.findAll();
+    }
 }
